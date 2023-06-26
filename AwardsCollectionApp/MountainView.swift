@@ -14,7 +14,8 @@ struct MountainView: View {
             Circle()
                 .foregroundColor(.orange)
                 .frame(width: 150)
-                .offset(x: 30, y: -40)
+                .offset(x: 30, y: -50)
+                .shadow(color: .red, radius: 20)
             
             GeometryReader { geometry in
                 let width = geometry.size.width
@@ -34,7 +35,23 @@ struct MountainView: View {
                         endPoint: .bottom
                     )
                 )
-                .scaleEffect(1)
+                .shadow(color: .black, radius: 10)
+                
+                Path { path in
+                    path.move(to: CGPoint(x: middle, y: 0))
+                    path.addLine(to: CGPoint(x: minSize, y: minSize))
+                    path.addLine(to: CGPoint(x: 0, y: minSize))
+                }
+                .fill(
+                    LinearGradient(
+                        gradient: Gradient(colors: [.cyan, .blue]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+                .scaleEffect(0.6)
+                .offset(x: -50, y: 40)
+                .shadow(color: .black, radius: 10)
             }
             
             let offsets = [50, 10, 0, -30, -70]
@@ -45,6 +62,13 @@ struct MountainView: View {
                     .offset(x: CGFloat(offset), y: 90)
             }
             .opacity(0.5)
+            
+            Image(systemName: "cloud.fill")
+                .resizable()
+                .foregroundColor(.white)
+                .frame(width: 80, height: 50)
+                .offset(x: 30, y: -20)
+                .opacity(0.8)
         }
     }
 }
