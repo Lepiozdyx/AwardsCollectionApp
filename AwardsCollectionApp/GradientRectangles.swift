@@ -24,6 +24,8 @@ struct GradientRectangles: View {
                                 endPoint: UnitPoint(x: 1, y: 0)
                             )
                         )
+                        .opacity(0.8)
+                        .border(.white, width: 2)
                         .rotationEffect(.degrees(Double(iteration) * 60))
                         .frame(width: width * 0.7, height: height * 0.7)
                 }
