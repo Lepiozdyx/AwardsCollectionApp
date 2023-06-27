@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State private var awardIsShowing = false
+    @State private var cloudOffset: CGFloat = -150
     
     var body: some View {
         VStack {
@@ -23,9 +24,39 @@ struct MainView: View {
             Spacer()
             
             if awardIsShowing {
-                GradientRectangles()
+                MountainView()
                     .frame(width: 250, height: 250)
                     .transition(.customTransition)
+                
+                CloudView()
+                    .frame(width: 100, height: 60)
+                    .offset(x: cloudOffset, y: -150)
+                    .animation(
+                        .linear(duration: 5)
+                        .repeatForever(autoreverses: false),
+                        value: cloudOffset
+                    )
+                    .onAppear {
+                        cloudOffset = 250
+                    }
+                    .onDisappear {
+                        cloudOffset = -250
+                    }
+                
+                CloudView()
+                    .frame(width: 100, height: 60)
+                    .offset(x: cloudOffset, y: -350)
+                    .animation(
+                        .linear(duration: 7)
+                        .repeatForever(autoreverses: false),
+                        value: cloudOffset
+                    )
+                    .onAppear {
+                        cloudOffset = 250
+                    }
+                    .onDisappear {
+                        cloudOffset = -250
+                    }
             }
             
             Spacer()
