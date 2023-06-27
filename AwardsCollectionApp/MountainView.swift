@@ -68,12 +68,9 @@ struct MountainView: View {
                 }
                 .opacity(0.5)
                 
-                Image(systemName: "cloud.fill")
-                    .resizable()
-                    .foregroundColor(.white)
+                CloudView()
                     .frame(width: width * 0.4, height: hight * 0.25)
                     .offset(x: width * 0.3, y: -hight * 0.1)
-                    .opacity(0.8)
             }
         }
     }
@@ -83,5 +80,15 @@ struct LinesView_Previews: PreviewProvider {
     static var previews: some View {
         MountainView()
             .frame(width: 200, height: 200)
+    }
+}
+
+struct CloudView: View {
+    
+    var body: some View {
+        Image(systemName: "cloud.fill")
+            .resizable()
+            .foregroundColor(.white)
+            .opacity(0.8)
     }
 }
