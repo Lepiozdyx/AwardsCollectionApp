@@ -10,23 +10,22 @@ import SwiftUI
 struct MountainView: View {
     var body: some View {
         
-        ZStack {
-            Circle()
-                .foregroundColor(.orange)
-                .frame(width: 150)
-                .offset(x: 30, y: -50)
-                .shadow(color: .red, radius: 20)
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let hight = geometry.size.height
             
-            GeometryReader { geometry in
-                let width = geometry.size.width
-                let hight = geometry.size.height
-                let minSize = min(width, hight)
-                let middle = minSize / 2
+            ZStack {
+                Circle()
+                    .foregroundColor(.orange)
+                    .frame(width: width * 0.8)
+                    .offset(x: width * 0.25, y: -hight * 0.2)
+                    .shadow(color: .red, radius: 40)
+                    .scaleEffect(0.8)
                 
                 Path { path in
-                    path.move(to: CGPoint(x: middle, y: 0))
-                    path.addLine(to: CGPoint(x: minSize, y: minSize))
-                    path.addLine(to: CGPoint(x: 0, y: minSize))
+                    path.move(to: CGPoint(x: width * 0.5, y: 0))
+                    path.addLine(to: CGPoint(x: width, y: hight))
+                    path.addLine(to: CGPoint(x: 0, y: hight))
                 }
                 .fill(
                     LinearGradient(
@@ -36,39 +35,46 @@ struct MountainView: View {
                     )
                 )
                 .shadow(color: .black, radius: 10)
+                .scaleEffect(0.9)
                 
                 Path { path in
-                    path.move(to: CGPoint(x: middle, y: 0))
-                    path.addLine(to: CGPoint(x: minSize, y: minSize))
-                    path.addLine(to: CGPoint(x: 0, y: minSize))
+                    path.move(to: CGPoint(x: width * 0.5, y: 0))
+                    path.addLine(to: CGPoint(x: width, y: hight))
+                    path.addLine(to: CGPoint(x: 0, y: hight))
                 }
                 .fill(
                     LinearGradient(
-                        gradient: Gradient(colors: [.cyan, .blue]),
+                        gradient: Gradient(colors: [.mint, .blue]),
                         startPoint: .top,
                         endPoint: .bottom
                     )
                 )
-                .scaleEffect(0.6)
-                .offset(x: -50, y: 40)
+                .scaleEffect(0.5)
+                .offset(x: -width * 0.25, y: hight * 0.2)
                 .shadow(color: .black, radius: 10)
+                
+                let offsets = [
+                    width * 0.25,
+                    width * 0.05,
+                    0,
+                    -width * 0.1,
+                    -width * 0.25
+                ]
+                
+                ForEach(offsets, id: \.self) { offset in
+                    Image(systemName: "forward.fill")
+                        .rotationEffect(.degrees(-90))
+                        .offset(x: CGFloat(offset), y: hight * 0.45)
+                }
+                .opacity(0.5)
+                
+                Image(systemName: "cloud.fill")
+                    .resizable()
+                    .foregroundColor(.white)
+                    .frame(width: width * 0.4, height: hight * 0.25)
+                    .offset(x: width * 0.3, y: -hight * 0.1)
+                    .opacity(0.8)
             }
-            
-            let offsets = [50, 10, 0, -30, -70]
-            
-            ForEach(offsets, id: \.self) { offset in
-                Image(systemName: "forward.fill")
-                    .rotationEffect(.degrees(-90))
-                    .offset(x: CGFloat(offset), y: 90)
-            }
-            .opacity(0.5)
-            
-            Image(systemName: "cloud.fill")
-                .resizable()
-                .foregroundColor(.white)
-                .frame(width: 80, height: 50)
-                .offset(x: 30, y: -20)
-                .opacity(0.8)
         }
     }
 }
