@@ -67,14 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				A89D0930267B76D400C1FB66 /* AwardsCollectionAppApp.swift */,
-				A89D093F267B777E00C1FB66 /* StarterView.swift */,
-				A89D0932267B76D400C1FB66 /* MainView.swift */,
-				A8A20B562837907D00C7401B /* CartRacingView.swift */,
-				A89D0941267B77C800C1FB66 /* AwardsView.swift */,
-				A8E1B482267B7972005E98AA /* GradientRectangles.swift */,
-				A8E1B484267B7978005E98AA /* PathView.swift */,
-				A8E1B480267B7967005E98AA /* CurvesView.swift */,
-				FAB6FCBD2A49D50800CBE49C /* MountainView.swift */,
+				FAAF1DCA2A4DFAF2005EC033 /* Views */,
 				A89D0934267B76D600C1FB66 /* Assets.xcassets */,
 				A89D0939267B76D600C1FB66 /* Info.plist */,
 				A89D0936267B76D600C1FB66 /* Preview Content */,
@@ -88,6 +81,29 @@
 				A89D0937267B76D600C1FB66 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAAF1DCA2A4DFAF2005EC033 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A89D093F267B777E00C1FB66 /* StarterView.swift */,
+				A89D0932267B76D400C1FB66 /* MainView.swift */,
+				A8A20B562837907D00C7401B /* CartRacingView.swift */,
+				A89D0941267B77C800C1FB66 /* AwardsView.swift */,
+				FAAF1DCB2A4DFB15005EC033 /* Awards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAAF1DCB2A4DFB15005EC033 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1B482267B7972005E98AA /* GradientRectangles.swift */,
+				A8E1B484267B7978005E98AA /* PathView.swift */,
+				A8E1B480267B7967005E98AA /* CurvesView.swift */,
+				FAB6FCBD2A49D50800CBE49C /* MountainView.swift */,
+			);
+			path = Awards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
