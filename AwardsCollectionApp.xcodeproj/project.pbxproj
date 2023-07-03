@@ -18,6 +18,8 @@
 		A8E1B483267B7972005E98AA /* GradientRectangles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1B482267B7972005E98AA /* GradientRectangles.swift */; };
 		A8E1B485267B7979005E98AA /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1B484267B7978005E98AA /* PathView.swift */; };
 		FAB6FCBE2A49D50800CBE49C /* MountainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6FCBD2A49D50800CBE49C /* MountainView.swift */; };
+		FAEBD3172A52FFFD0033452F /* VerticalGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBD3162A52FFFD0033452F /* VerticalGridView.swift */; };
+		FAEBD31A2A53081B0033452F /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBD3192A53081B0033452F /* Award.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		A8E1B482267B7972005E98AA /* GradientRectangles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientRectangles.swift; sourceTree = "<group>"; };
 		A8E1B484267B7978005E98AA /* PathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
 		FAB6FCBD2A49D50800CBE49C /* MountainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainView.swift; sourceTree = "<group>"; };
+		FAEBD3162A52FFFD0033452F /* VerticalGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGridView.swift; sourceTree = "<group>"; };
+		FAEBD3192A53081B0033452F /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			children = (
 				A89D0930267B76D400C1FB66 /* AwardsCollectionAppApp.swift */,
 				FAAF1DCA2A4DFAF2005EC033 /* Views */,
+				FAEBD3182A5300040033452F /* Grids */,
 				A89D0934267B76D600C1FB66 /* Assets.xcassets */,
 				A89D0939267B76D600C1FB66 /* Info.plist */,
 				A89D0936267B76D600C1FB66 /* Preview Content */,
@@ -90,6 +95,7 @@
 				A89D0932267B76D400C1FB66 /* MainView.swift */,
 				A8A20B562837907D00C7401B /* CartRacingView.swift */,
 				A89D0941267B77C800C1FB66 /* AwardsView.swift */,
+				FAEBD3192A53081B0033452F /* Award.swift */,
 				FAAF1DCB2A4DFB15005EC033 /* Awards */,
 			);
 			path = Views;
@@ -104,6 +110,14 @@
 				FAB6FCBD2A49D50800CBE49C /* MountainView.swift */,
 			);
 			path = Awards;
+			sourceTree = "<group>";
+		};
+		FAEBD3182A5300040033452F /* Grids */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBD3162A52FFFD0033452F /* VerticalGridView.swift */,
+			);
+			path = Grids;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +192,8 @@
 			files = (
 				FAB6FCBE2A49D50800CBE49C /* MountainView.swift in Sources */,
 				A8A20B572837907D00C7401B /* CartRacingView.swift in Sources */,
+				FAEBD3172A52FFFD0033452F /* VerticalGridView.swift in Sources */,
+				FAEBD31A2A53081B0033452F /* Award.swift in Sources */,
 				A8E1B481267B7967005E98AA /* CurvesView.swift in Sources */,
 				A89D0942267B77C800C1FB66 /* AwardsView.swift in Sources */,
 				A89D0933267B76D400C1FB66 /* MainView.swift in Sources */,
